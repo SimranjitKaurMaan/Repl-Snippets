@@ -1,33 +1,9 @@
-var readlineSync = require('readline-sync');
-var questionOne = "am i older than 25? ";
-var answerOne = "yes";
-var answerTwo = "no";
-var userAnswer = readlineSync.question(questionOne);
+// functions
 
-var score = 0;
-
-if(userAnswer === "yes"){
- console.log(answerOne);
- score+=1;
-}
-else{console.log(answerTwo);
-score-=1;
+function add(numberOne, numberTwo) {
+  var sum = numberOne + numberTwo;
+  return sum;
 }
 
-console.log(score);
-
-
-questionTwo = "are you from USA?";
-answerOne = "yes";
-answerTwo = "no";
-userAnswer = readlineSync.question(questionTwo);
-
-if(userAnswer === "yes"){
- console.log(answerOne);
- score+=1;
-}
-else{console.log(answerTwo);
-score-=1;
-}
-
-console.log(score);
+var result = add(1,2);
+console.log("Sum of 1 and 2: "+ result);
