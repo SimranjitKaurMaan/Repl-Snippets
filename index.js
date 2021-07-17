@@ -1,19 +1,19 @@
-// functions
+var readlineSync = require('readline-sync');
+var score = 0;
 
-function add(numberOne, numberTwo) {
-  var sum = numberOne + numberTwo;
-  return sum;
+function answerQuestion(question,answer){
+  var userAnswer = readlineSync.question(question);
+  if(userAnswer === answer){
+    console.log('You are right!')
+    score+=1;
+  }else{
+    console.log('You are wrong!')
+    score-=1;
+  }
 }
 
-var result = add(1,2);
-console.log("Sum of 1 and 2: "+ result);
 
+answerQuestion('What\'s your name? ', 'Simran');
+console.log("Your score is ", score)
 
-function product(numberOne, numberTwo) {
-  var product = numberOne * numberTwo;
-  return product;
-}
-
-result = product(1,2);
-console.log("Product of 1 and 2: "+ product(1,2));
 
