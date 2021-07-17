@@ -1,19 +1,7 @@
-var readlineSync = require('readline-sync');
-var score = 0;
+var groceryList = ["milk","egg","pav","samosa","flowers"]
+console.log(groceryList[0])
+console.log(groceryList.length)
 
-function answerQuestion(question,answer){
-  var userAnswer = readlineSync.question(question);
-  if(userAnswer === answer){
-    console.log('You are right!')
-    score+=1;
-  }else{
-    console.log('You are wrong!')
-    score-=1;
-  }
+for(var i=0;i<groceryList.length;i++){
+  console.log(groceryList[i])
 }
-
-
-answerQuestion('What\'s your name? ', 'Simran');
-console.log("Your score is ", score)
-
-
