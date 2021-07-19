@@ -4,7 +4,6 @@ var userName = readlineSync.question('What is your name? ');
 var score=0;
 console.log("Welcome "+ userName)
 
-<<<<<<< end-game
 console.log('Let\'s check if you can manage your finances independently?')
 
 // play function 
