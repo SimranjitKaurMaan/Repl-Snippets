@@ -4,12 +4,14 @@ var userName = readlineSync.question('What is your name? ');
 var score=0;
 console.log("Welcome "+ userName)
 
-console.log('Let\'s check if you can manage your finances independently?')
+console.log("\n ------------------------------------\n")
+
+console.log('Let\'s check if you can manage your finances independently? You can answer: Yes/No')
 
 // play function 
 function play(question,answer){
   var userAnswer = readlineSync.question(question);
-  if(userAnswer === answer){
+  if(userAnswer.toUpperCase() === answer.toUpperCase()){
     score++;
   }else{
     score--;
@@ -51,11 +53,13 @@ var questions = [{
 }];
 
 for(var i=0;i<questions.length;i++){
+ console.log("\n") 
  play(questions[i].question,questions[i].answer);
 }
 
 console.log("Your score is : "+ score)
-if(score>6){
+console.log("\n---------The Final verdict------------\n")
+if(score>=6){
   console.log("Congrats! You know how to manage your fincances independently.You don't likely need to pay for financial advice.")
 }else{
   console.log("Don't worry.You can read up on a few books like Unconventional Success by David F. Swensen and Common Sense on Mutual Funds by John C. Bogle to get going.")
