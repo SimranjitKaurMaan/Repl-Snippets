@@ -13,8 +13,6 @@ function play(question,answer){
   var userAnswer = readlineSync.question(question);
   if(userAnswer.toUpperCase() === answer.toUpperCase()){
     score++;
-  }else{
-    score--;
   }
 
   console.log("Current score: "+ score);
